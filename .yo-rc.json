@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.emilgelm.cartracker"
+    },
+    "jhipsterVersion": "6.4.1",
+    "applicationType": "monolith",
+    "baseName": "cartracker",
+    "packageName": "com.emilgelm.cartracker",
+    "packageFolder": "com/emilgelm/cartracker",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZWYyYTA5ZDRmNjI3YWM1N2Q1MTA0NWEyOGMyNzkwZjczYzdiZmY4MTFlYzU3NjZjMTM3NDg2ODExYzdkNTQ1N2VmMTBiYjExODkyYmEyMjZhMTczYzEyOTQ0YzQ5NDFlNmU3Mjg5M2E0M2E4NmQ5MzE1NWFkZDExNGE1YTI4MDE=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "minty",
+    "clientThemeVariant": "primary",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
