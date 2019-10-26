@@ -24,56 +24,56 @@ class LoginModal extends React.Component<ILoginModalProps> {
       <Modal isOpen={this.props.showModal} toggle={handleClose} backdrop="static" id="login-page" autoFocus={false}>
         <AvForm onSubmit={this.handleSubmit}>
           <ModalHeader id="login-title" toggle={handleClose}>
-            Sign in
+            התחבר
           </ModalHeader>
           <ModalBody>
             <Row>
               <Col md="12">
                 {loginError ? (
                   <Alert color="danger">
-                    <strong>Failed to sign in!</strong> Please check your credentials and try again.
+                    <strong>שגיאה!</strong> בדוק את הפרטים ונסה שנית
                   </Alert>
                 ) : null}
               </Col>
               <Col md="12">
                 <AvField
                   name="username"
-                  label="Username"
-                  placeholder="Your username"
+                  label="שם משתמש"
+                  placeholder="שם משתמש"
                   required
-                  errorMessage="Username cannot be empty!"
+                  errorMessage="שם משתמש לא יכול להיות ריק!"
                   autoFocus
                 />
                 <AvField
                   name="password"
                   type="password"
-                  label="Password"
-                  placeholder="Your password"
+                  label="סיסמה"
+                  placeholder="סיסמא"
                   required
-                  errorMessage="Password cannot be empty!"
+                  errorMessage="סיסמה לא יכולה להיות ריקה!"
                 />
                 <AvGroup check inline>
                   <Label className="form-check-label">
-                    <AvInput type="checkbox" name="rememberMe" /> Remember me
+                    <AvInput type="checkbox" name="rememberMe" /> זכור אותי
                   </Label>
                 </AvGroup>
               </Col>
             </Row>
             <div className="mt-1">&nbsp;</div>
             <Alert color="warning">
-              <Link to="/account/reset/request">Did you forget your password?</Link>
+              <Link to="/account/reset/request">שחזור סיסמה</Link>
             </Alert>
             <Alert color="warning">
-              <span>You don&apos;t have an account yet?</span> <Link to="/account/register">Register a new account</Link>
+              <span>אין לך חשבון עדיין?</span> <Link to="/account/register">צור חשבון</Link>
             </Alert>
           </ModalBody>
           <ModalFooter>
-            <Button color="secondary" onClick={handleClose} tabIndex="1">
-              Cancel
-            </Button>{' '}
             <Button color="primary" type="submit">
-              Sign in
+              התחבר
             </Button>
+            <Button color="secondary" onClick={handleClose} tabIndex="1">
+              ביטול
+            </Button>{' '}
           </ModalFooter>
         </AvForm>
       </Modal>

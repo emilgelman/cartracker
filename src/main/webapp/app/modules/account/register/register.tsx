@@ -26,7 +26,7 @@ export const RegisterPage = (props: IRegisterProps) => {
     <div>
       <Row className="justify-content-center">
         <Col md="8">
-          <h1 id="register-title">Registration</h1>
+          <h1 id="register-title">הרשמה</h1>
         </Col>
       </Row>
       <Row className="justify-content-center">
@@ -34,65 +34,55 @@ export const RegisterPage = (props: IRegisterProps) => {
           <AvForm id="register-form" onValidSubmit={handleValidSubmit}>
             <AvField
               name="username"
-              label="Username"
-              placeholder={'Your username'}
+              label="שם משתמש"
+              placeholder={'שם משתמש'}
               validate={{
-                required: { value: true, errorMessage: 'Your username is required.' },
-                pattern: { value: '^[_.@A-Za-z0-9-]*$', errorMessage: 'Your username can only contain letters and digits.' },
-                minLength: { value: 1, errorMessage: 'Your username is required to be at least 1 character.' },
-                maxLength: { value: 50, errorMessage: 'Your username cannot be longer than 50 characters.' }
+                required: { value: true, errorMessage: 'שם משתמש הינו שדה חובה' },
+                pattern: { value: '^[_.@A-Za-z0-9-]*$', errorMessage: 'שם המשתמש יכול להכיל רק אותיות באנגלית וספרות' },
+                minLength: { value: 1, errorMessage: 'שם המשתמש חייב להכיל לפחות תו אחד' },
+                maxLength: { value: 50, errorMessage: 'שם המשתמש לא יכול להיות ארוך יותר מ 50 תווים' }
               }}
             />
             <AvField
               name="email"
-              label="Email"
-              placeholder={'Your email'}
+              label="מייל"
+              placeholder={'מייל'}
               type="email"
               validate={{
-                required: { value: true, errorMessage: 'Your email is required.' },
-                minLength: { value: 5, errorMessage: 'Your email is required to be at least 5 characters.' },
-                maxLength: { value: 254, errorMessage: 'Your email cannot be longer than 50 characters.' }
+                required: { value: true, errorMessage: 'מייל הינו שדה חובה' },
+                minLength: { value: 5, errorMessage: 'מייל חייב להיות באורך של לפחות 5 תווים' },
+                maxLength: { value: 254, errorMessage: 'מייל לא יכול להיות ארוך יותר מ 50 תווים' }
               }}
             />
             <AvField
               name="firstPassword"
-              label="New password"
-              placeholder={'New password'}
+              label="סיסמה"
+              placeholder={'סיסמה'}
               type="password"
               onChange={updatePassword}
               validate={{
-                required: { value: true, errorMessage: 'Your password is required.' },
-                minLength: { value: 4, errorMessage: 'Your password is required to be at least 4 characters.' },
-                maxLength: { value: 50, errorMessage: 'Your password cannot be longer than 50 characters.' }
+                required: { value: true, errorMessage: 'סיסמה הינו שדה חובה' },
+                minLength: { value: 4, errorMessage: 'הסיסמה חייבת להיות באורך של לפחות 4 תווים' },
+                maxLength: { value: 50, errorMessage: 'הסיסמה אינה יכולה להיות באורך של יותר מ 50 תווים' }
               }}
             />
             <PasswordStrengthBar password={password} />
             <AvField
               name="secondPassword"
-              label="New password confirmation"
-              placeholder="Confirm the new password"
+              label="אימות סיסמה"
+              placeholder="אימות סיסמה"
               type="password"
               validate={{
-                required: { value: true, errorMessage: 'Your confirmation password is required.' },
-                minLength: { value: 4, errorMessage: 'Your confirmation password is required to be at least 4 characters.' },
-                maxLength: { value: 50, errorMessage: 'Your confirmation password cannot be longer than 50 characters.' },
-                match: { value: 'firstPassword', errorMessage: 'The password and its confirmation do not match!' }
+                required: { value: true, errorMessage: 'אימות סיסמה הינו שדה חובה' },
+                minLength: { value: 4, errorMessage: 'הסיסמה חייבת להיות באורך של לפחות 4 תווים' },
+                maxLength: { value: 50, errorMessage: 'הסיסמה אינה יכולה להיות באורך של יותר מ 50 תווים' },
+                match: { value: 'firstPassword', errorMessage: 'שדה הסיסמה ואימות הסיסמא אינם זהים' }
               }}
             />
             <Button id="register-submit" color="primary" type="submit">
-              Register
+              הרשם
             </Button>
           </AvForm>
-          <p>&nbsp;</p>
-          <Alert color="warning">
-            <span>If you want to</span>
-            <a className="alert-link"> sign in</a>
-            <span>
-              , you can try the default accounts:
-              <br />- Administrator (login=&quot;admin&quot; and password=&quot;admin&quot;)
-              <br />- User (login=&quot;user&quot; and password=&quot;user&quot;).
-            </span>
-          </Alert>
         </Col>
       </Row>
     </div>

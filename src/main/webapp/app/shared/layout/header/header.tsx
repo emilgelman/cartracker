@@ -40,8 +40,8 @@ const Header = (props: IHeaderProps) => {
       <Navbar dark expand="sm" fixed="top" className="bg-primary">
         <NavbarToggler aria-label="Menu" onClick={toggleMenu} />
         <Brand />
-        <Collapse isOpen={menuOpen} navbar>
-          <Nav id="header-tabs" className="ml-auto" navbar>
+        <Collapse className="pull-right"  isOpen={menuOpen} navbar>
+          <Nav id="header-tabs" className="justify-content-start" navbar>
             <Home />
             {props.isAuthenticated && <EntitiesMenu />}
             {props.isAuthenticated && props.isAdmin && <AdminMenu showSwagger={props.isSwaggerEnabled} />}

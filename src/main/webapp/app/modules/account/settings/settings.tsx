@@ -32,19 +32,19 @@ export const SettingsPage = (props: IUserSettingsProps) => {
     <div>
       <Row className="justify-content-center">
         <Col md="8">
-          <h2 id="settings-title">User settings for {props.account.login}</h2>
+          <h2 id="settings-title">הגדרות עבור {props.account.login}</h2>
           <AvForm id="settings-form" onValidSubmit={handleValidSubmit}>
             {/* First name */}
             <AvField
               className="form-control"
               name="firstName"
-              label="First Name"
+              label="שם פרטי"
               id="firstName"
-              placeholder="Your first name"
+              placeholder="שם פרטי"
               validate={{
-                required: { value: true, errorMessage: 'Your first name is required.' },
-                minLength: { value: 1, errorMessage: 'Your first name is required to be at least 1 character' },
-                maxLength: { value: 50, errorMessage: 'Your first name cannot be longer than 50 characters' }
+                required: { value: true, errorMessage: 'שם פרטי הינו שדה חובה' },
+                minLength: { value: 1, errorMessage: 'השם הפרטי חייב להכיל לפחות תו אחד' },
+                maxLength: { value: 50, errorMessage: 'השם הפרטי לא יכול להיות ארוך יותר מ 50 תווים' }
               }}
               value={props.account.firstName}
             />
@@ -52,31 +52,31 @@ export const SettingsPage = (props: IUserSettingsProps) => {
             <AvField
               className="form-control"
               name="lastName"
-              label="Last Name"
+              label="שם משפחה"
               id="lastName"
-              placeholder="Your last name"
+              placeholder="שם משפחה"
               validate={{
-                required: { value: true, errorMessage: 'Your last name is required.' },
-                minLength: { value: 1, errorMessage: 'Your last name is required to be at least 1 character' },
-                maxLength: { value: 50, errorMessage: 'Your last name cannot be longer than 50 characters' }
+                required: { value: true, errorMessage: 'שם משפחה הינו שדה חובה' },
+                minLength: { value: 1, errorMessage: 'שם המשפחה חייב להכיל לפחות תו 1' },
+                maxLength: { value: 50, errorMessage: 'שם המשפחה לא יכול להיות ארוך יותר מ 50 תווים' }
               }}
               value={props.account.lastName}
             />
             {/* Email */}
             <AvField
               name="email"
-              label="Email"
-              placeholder={'Your email'}
+              label="מייל"
+              placeholder={'מייל'}
               type="email"
               validate={{
-                required: { value: true, errorMessage: 'Your email is required.' },
-                minLength: { value: 5, errorMessage: 'Your email is required to be at least 5 characters.' },
-                maxLength: { value: 254, errorMessage: 'Your email cannot be longer than 50 characters.' }
+                required: { value: true, errorMessage: 'מייל הינו שדה חובה' },
+                minLength: { value: 5, errorMessage: 'המייל חייב להיות באורך של לפחות 5 תווים' },
+                maxLength: { value: 254, errorMessage: 'מייל לא יכול להיות ארוך יותר מ 50 תווים' }
               }}
               value={props.account.email}
             />
             <Button color="primary" type="submit">
-              Save
+              שמור
             </Button>
           </AvForm>
         </Col>

@@ -58,7 +58,7 @@ export const saveAccountSettings = account => async dispatch => {
     type: ACTION_TYPES.UPDATE_ACCOUNT,
     payload: axios.post(apiUrl, account),
     meta: {
-      successMessage: '<strong>Settings saved!</strong>'
+      successMessage: 'ההגדרות נשמרו!'
     }
   });
 

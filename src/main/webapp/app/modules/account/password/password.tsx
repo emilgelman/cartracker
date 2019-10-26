@@ -30,56 +30,56 @@ export const PasswordPage = (props: IUserPasswordProps) => {
     <div>
       <Row className="justify-content-center">
         <Col md="8">
-          <h2 id="password-title">Password for {props.account.login}</h2>
+          <h2 id="password-title">שינוי סיסמה עבור {props.account.login}</h2>
           <AvForm id="password-form" onValidSubmit={handleValidSubmit}>
             <AvField
               name="currentPassword"
-              label="Current password"
-              placeholder={'Current password'}
+              label="סיסמה נוכחית"
+              placeholder={'סיסמה נוכחית'}
               type="password"
               validate={{
-                required: { value: true, errorMessage: 'Your password is required.' }
+                required: { value: true, errorMessage: 'סיסמה נוכחית הינו שדה חובה' }
               }}
             />
             <AvField
               name="newPassword"
-              label="New password"
-              placeholder={'New password'}
+              label="סיסמה חדשה"
+              placeholder={'סיסמה חדשה'}
               type="password"
               validate={{
-                required: { value: true, errorMessage: 'Your password is required.' },
-                minLength: { value: 4, errorMessage: 'Your password is required to be at least 4 characters.' },
-                maxLength: { value: 50, errorMessage: 'Your password cannot be longer than 50 characters.' }
+                required: { value: true, errorMessage: 'סיסמה החדשה הינו שדה חובה' },
+                minLength: { value: 4, errorMessage: 'הסיסמה החדשה חייבת להיות באורך של לפחות 4 תווים' },
+                maxLength: { value: 50, errorMessage: 'הסיסמה החדשה לא יכולה להיות ארוכה יותר מ 50 תווים' }
               }}
               onChange={updatePassword}
             />
             <PasswordStrengthBar password={password} />
             <AvField
               name="confirmPassword"
-              label="New password confirmation"
-              placeholder="Confirm the new password"
+              label="אמת סיסמה חדשה"
+              placeholder="אמת סיסמה חדשה"
               type="password"
               validate={{
                 required: {
                   value: true,
-                  errorMessage: 'Your confirmation password is required.'
+                  errorMessage: 'אימות סיסמה חדשה הינו שדה חובה'
                 },
                 minLength: {
                   value: 4,
-                  errorMessage: 'Your confirmation password is required to be at least 4 characters.'
+                  errorMessage: 'הסיסמה החדשה חייבת להיות באורך של לפחות 4 תווים'
                 },
                 maxLength: {
                   value: 50,
-                  errorMessage: 'Your confirmation password cannot be longer than 50 characters.'
+                  errorMessage: 'הסיסמה החדשה לא יכולה להיות ארוכה יותר מ 50 תווים'
                 },
                 match: {
                   value: 'newPassword',
-                  errorMessage: 'The password and its confirmation do not match!'
+                  errorMessage: 'שדה הסיסמה ואימות הסיסמה אינם זהים'
                 }
               }}
             />
             <Button color="success" type="submit">
-              Save
+              שמור
             </Button>
           </AvForm>
         </Col>

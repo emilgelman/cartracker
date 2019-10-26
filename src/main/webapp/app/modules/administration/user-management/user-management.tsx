@@ -65,25 +65,25 @@ export const UserManagement = (props: IUserManagementProps) => {
               <FontAwesomeIcon icon="sort" />
             </th>
             <th className="hand" onClick={sort('login')}>
-              Login
+              שם משתמש
               <FontAwesomeIcon icon="sort" />
             </th>
             <th className="hand" onClick={sort('email')}>
-              Email
+              מייל
               <FontAwesomeIcon icon="sort" />
             </th>
             <th />
             <th>Profiles</th>
             <th className="hand" onClick={sort('createdDate')}>
-              Created Date
+              תאריך יצירה
               <FontAwesomeIcon icon="sort" />
             </th>
             <th className="hand" onClick={sort('lastModifiedBy')}>
-              Last Modified By
+              שונה לאחרונה על ידי
               <FontAwesomeIcon icon="sort" />
             </th>
             <th id="modified-date-sort" className="hand" onClick={sort('lastModifiedDate')}>
-              Last Modified Date
+              תאריך שינוי אחרון
               <FontAwesomeIcon icon="sort" />
             </th>
             <th />
